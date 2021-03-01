@@ -1,6 +1,7 @@
 resources:
  - name: resource_1
    type: jfrog/SampleResource
+   syntaxVersion: 0.0.3
    configuration:
      foo: Hello
 
