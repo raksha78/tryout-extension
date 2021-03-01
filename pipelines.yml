@@ -1,6 +1,6 @@
 resources:
  - name: resource_1
-   type: jfrog/SampleResource
+   type: SampleResource
    syntaxVersion: 0.0.3
    configuration:
      foo: Hello
@@ -9,7 +9,7 @@ pipelines:
  - name: sleep_pipeline_extension
    steps:
       - name: S_Bash_0023
-        type: jfrog/HealthCheck
+        type: HealthCheck
         syntaxVersion: 0.0.3
         configuration:
            healthCheckUrl: https://www.google.com/
