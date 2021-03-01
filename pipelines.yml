@@ -1,21 +1,14 @@
 resources:
-  - name: execTemplatesGit
-    type: GitRepo
+ - name: resource_1
+    type: SampleResource
     configuration:
-      path: rahulnlb1/tryout-extension
-      gitProvider: RahulGithub
-      branches:
-        include: ^{{gitBranch}}$
-      files:
-        include: \bexecTemplates\/.+\b
+      foo: Hello
 
 pipelines:
  - name: sleep_pipeline_extension
-   #configuration:
-   #     nodePool: windows-master
    steps:
       - name: S_Bash_0023
-        type: shippable/HealthCheck
+        type: HealthCheck
         configuration:
            healthCheckUrl: https://www.google.com/
            notifyOnSuccess: true
@@ -23,7 +16,3 @@ pipelines:
            stuff:
               - "hi"
               - "hello"
-           integrations:
-            - name: Slack
-           inputResources:
-            - name: execTemplatesGit
