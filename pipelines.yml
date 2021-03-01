@@ -9,6 +9,7 @@ pipelines:
    steps:
       - name: S_Bash_0023
         type: jfrog/HealthCheck
+        syntaxVersion: 0.0.3
         configuration:
            healthCheckUrl: https://www.google.com/
            notifyOnSuccess: true
