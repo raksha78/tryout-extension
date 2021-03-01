@@ -1,8 +1,8 @@
 resources:
  - name: resource_1
-    type: SampleResource
-    configuration:
-      foo: Hello
+   type: SampleResource
+   configuration:
+     foo: Hello
 
 pipelines:
  - name: sleep_pipeline_extension
