@@ -1,7 +1,7 @@
 resources:
   - name: step001
     type: newgitR/test2
-    syntaxVersion: latest
+#     syntaxVersion: latest
     configuration:      
       test: foo
 
@@ -10,7 +10,7 @@ pipelines:
     steps:
       - name: step100
         type: gitcheck/test_test
-        syntaxVersion: latest
+#         syntaxVersion: latest
         configuration:              
           foo: bar
           inputResources:
