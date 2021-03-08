@@ -1,6 +1,6 @@
 resources:
   - name: step001
-    type: Gitnp/gittest1
+    type: newgitR/test2
     syntaxVersion: latest
     configuration:      
       test: foo
@@ -9,7 +9,7 @@ pipelines:
   - name: extensionstest
     steps:
       - name: step100
-        type: gitcheck/gitstep
+        type: gitcheck/test_test
         syntaxVersion: latest
         configuration:              
           foo: bar
