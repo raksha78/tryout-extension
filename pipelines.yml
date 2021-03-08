@@ -1,20 +1,17 @@
 resources:
- - name: resource_1
-   type: SampleResource
-   syntaxVersion: 0.0.3
-   configuration:
-     foo: Hello
+  - name: step001
+    type: Gitnp/gittest1
+    syntaxVersion: latest
+    configuration:      
+      test: foo
 
 pipelines:
- - name: sleep_pipeline_extension
-   steps:
-      - name: S_Bash_0023
-        type: HealthCheck
-        syntaxVersion: 0.0.4
-        configuration:
-           healthCheckUrl: https://www.google.com/
-           notifyOnSuccess: true
-           notifyOnFailure: true
-           stuff:
-              - "hi"
-              - "hello"
+  - name: extensionstest
+    steps:
+      - name: step100
+        type: gitcheck/gitstep
+        configuration:              
+          foo: bar
+          inputResources:
+            - name: step001
+        
